@@ -1,0 +1,118 @@
+.header, .menu
+  background-color: $primary
+.navbar
+  display: flex
+  justify-content: space-between
+  margin: 0 35px 0 35px
+  min-height: 90px
+  border-bottom: 1px solid $border
+  &-menu
+    display: flex
+    &__list
+      display: flex
+      align-items: center
+      padding-left: 35px
+    &__item
+      font-family: GilroySemibold
+      font-size: 16px
+      line-height: 155%
+      list-style: none
+      &:not(:last-child)
+        margin-right: 30px
+    &__link
+      color: $secondary
+      &:hover
+        color: $hover
+.info
+  display: flex
+  &__wrapper
+    display: none
+.logo
+  display: flex
+  align-items: center
+  border-right: 1px solid $border
+  padding-right: 35px
+  &__icon
+    width: 194px
+    height: 50px
+.location
+  display: flex
+  align-items: center
+  margin-right: 35px
+  border: none
+  background-color: inherit
+  color: $secondary
+  height: 100%
+  padding: 0
+  &-icon
+    margin-right: 10px
+  &-text
+    font-family: 'GilroySemibold'
+    font-size: 16px
+    line-height: 155%
+    color: $secondary
+.phone
+  display: flex
+  align-items: center
+  padding-left: 35px
+  border-left: 1px solid $border
+  color: $secondary
+  height: 100%
+  &-icon
+    margin-right: 10px
+  &-text
+    font-family: 'GilroySemibold'
+    font-size: 16px
+    line-height: 155%
+    color: $secondary
+.hamburger
+  width: 20px
+  position: relative
+  transition-duration: 1s
+  background: inherit
+  border: none
+  cursor: pointer
+  &__line
+    right: 0
+    left: 0
+    height: 2px
+    width: 20px
+    background-color: $secondary
+    position: absolute
+    transition-duration: .25s
+    transition-delay: .25s
+    &::before
+      left: 0
+      position: absolute
+      top: -5px
+      height: 2px
+      width: 20px
+      background-color: $secondary
+      content: ""
+      transition-duration: .25s
+      transition: transform .25s, top .25s .25s
+    &::after
+      left: 0
+      position: absolute
+      top: 5px
+      height: 2px
+      width: 20px
+      background-color: $secondary
+      content: ""
+      transition-duration: .25s
+      transition: transform .25s, top .25s .25s
+  &--open &__line
+    transition-duration: 0.1s
+    transition-delay: .25s
+    background: transparent
+    &::before
+      transition: top .25s, transform .25s .25s
+      top: 0px
+      transform: rotateZ(-45deg)
+    &::after
+      transition: top 0.4s, transform .25s .25s
+      top: 0px
+      transform: rotateZ(45deg)
+.menu
+  &__phone
+    display: none
